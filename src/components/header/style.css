@@ -1,22 +1,53 @@
+.header{
+    box-shadow: 0 8px 6px -6px rgb(196, 195, 195);
+
+}
+a{
+    text-decoration: none;
+}
 .menu{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1110px;
     margin: 0 auto;
+}
+
+.liks {
+    display: flex;
+    margin: 10px;
+}
+
+.logo{
+    margin: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #1877c9;
+}
+
+.links a {
+    margin: 10px;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.links a:hover{
+    color: #1877c9;
+}
+
+.cart{
+    width:  40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1877c9;
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.menu-items{
-    display: flex;
-    
-
-}
-.menu-items li{
-    margin: 10px;
-    text-decoration: none;
-    list-style: none;
-}
-
-.menu-items li a{
-    text-decoration: none;
-}
