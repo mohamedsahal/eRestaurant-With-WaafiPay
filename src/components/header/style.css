@@ -1,0 +1,22 @@
+.menu{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1110px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.menu-items{
+    display: flex;
+    
+
+}
+.menu-items li{
+    margin: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu-items li a{
+    text-decoration: none;
+}
