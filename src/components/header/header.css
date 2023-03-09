@@ -1,4 +1,4 @@
-.header{
+.navBar{
     box-shadow: 0 8px 6px -6px rgb(196, 195, 195);
 
 }
@@ -9,7 +9,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1110px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
