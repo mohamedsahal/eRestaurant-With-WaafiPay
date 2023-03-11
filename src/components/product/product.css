@@ -40,3 +40,7 @@
     margin: 10px;
     cursor: pointer;
 }
+
+.btn-secondary{
+    background-color: rgb(220, 3, 3);
+}

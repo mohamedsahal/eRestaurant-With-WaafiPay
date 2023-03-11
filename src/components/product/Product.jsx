@@ -1,14 +1,19 @@
+import { useState } from "react";
 import useShop from "../../ShowContext"
 import "./product.css"
 
 const Product = ({product}) => {
-    const {addToCart, products, total} = useShop();
+    const {addToCart, removeFromCart, products} = useShop();
+    const [isInCart, setIsInCart] = useState(false);
     const handleAddToCart = () =>{
+        if(isInCart){
+            removeFromCart()
+        }else{
         addToCart(product)
-        console.log(total)
+    }
         console.log(products)
     }
-    
+
   return (
    <div className="card"
    style={{
@@ -24,9 +29,10 @@ const Product = ({product}) => {
         <span>{product.name}</span>
         <span>${product.price}</span>
     </div>
-    <button className="btn btn-primary"
-    onClick={handleAddToCart}
-    >+</button>
+    <button className={`btn ${isInCart ? "btn-secondary":  "btn-primary" }`}
+    onClick={handleAddToCart}>
+        {isInCart ? "-" : "+"}
+    </button>
    </div>
   )
 }
