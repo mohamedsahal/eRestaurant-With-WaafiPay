@@ -6,6 +6,7 @@ const Product = ({product}) => {
     const handleAddToCart = () =>{
         addToCart(product)
         console.log(total)
+        console.log(products)
     }
     
   return (

@@ -16,10 +16,22 @@ const addToCart = (product) =>{
     })
 }
 
+const removeFromCart = (product) =>{ 
+    const updateProduct = state.products.filter(p => p.id !== product.id)
+    dispatch({
+        type: "REMOVE_FROM_CART",
+        payload: {
+            products: updateProduct
+        }
+    })
+}
+
+
 const values = {
     products: state.products,
     total: state.total,
-    addToCart
+    addToCart,
+    removeFromCart,
 }
     return <ShopContext.Provider value={values}>
         {children}

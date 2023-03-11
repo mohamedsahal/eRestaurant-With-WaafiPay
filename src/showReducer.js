@@ -13,6 +13,12 @@ const shopReducer = (state,action) =>{
                 ...state,
                 products: payload.products
             }
+
+            case "REMOVE_FROM_CART":
+                return{
+                    ...state,
+                    products: payload.products
+                }
         default:
             throw new Error ("Invalid")
     }
