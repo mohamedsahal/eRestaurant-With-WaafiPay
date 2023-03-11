@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react'
+import useShop from "../../ShowContext"
 import "./product.css"
 
 const Product = ({product}) => {
-    useEffect(()=>{
-        // console.log(product)
-    })
+    const {addToCart, products, total} = useShop();
+    const handleAddToCart = () =>{
+        addToCart(product)
+        console.log(total)
+    }
+    
   return (
    <div className="card"
    style={{
@@ -18,9 +21,11 @@ const Product = ({product}) => {
    >
     <div className="info">
         <span>{product.name}</span>
-        <span>{product.price}</span>
+        <span>${product.price}</span>
     </div>
-    <button className="btn btn-primary">+</button>
+    <button className="btn btn-primary"
+    onClick={handleAddToCart}
+    >+</button>
    </div>
   )
 }

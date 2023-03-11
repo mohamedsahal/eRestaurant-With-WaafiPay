@@ -24,7 +24,7 @@ const Home = () => {
         </div>
       </div>
       <div className="product">
-        <h1>Most popular dishes</h1>
+        <h1 className='productTitle'>Most popular dishes</h1>
       <Products/>
       </div>
     
