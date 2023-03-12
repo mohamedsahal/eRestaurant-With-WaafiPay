@@ -19,6 +19,13 @@ const shopReducer = (state,action) =>{
                     ...state,
                     products: payload.products
                 }
+
+            case "CALCULATE_PRODUCT_PRICE":
+                return{
+                    ...state,
+                    total: payload
+                }
+
         default:
             throw new Error ("Invalid")
     }

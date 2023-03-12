@@ -6,8 +6,20 @@ const ShopContext = createContext(initialState)
 export const ShopProvider = ({children}) =>{
     const [state, dispatch] = useReducer(shopReducer, initialState)
 
+const calculateProduct = (products) =>{
+    let total =0;
+    products.forEach(pro =>{
+        total += pro.price
+        dispatch({
+            type: "CALCULATE_PRODUCT_PRICE",
+            payload: total
+        })
+    })
+}
+
 const addToCart = (product) =>{ 
     const updatedProduct = state.products.concat(product)
+    calculateProduct(updatedProduct)
     dispatch({
         type: "ADD_TO_CART",
         payload: {
@@ -18,6 +30,7 @@ const addToCart = (product) =>{
 
 const removeFromCart = (product) => {
     const updatedProduct = state.products.filter(p => p.id !== product.id);
+    calculateProduct(updatedProduct)
     dispatch({
         type: "REMOVE_FROM_CART",
         payload: {
