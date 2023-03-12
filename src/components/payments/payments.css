@@ -7,7 +7,7 @@
     text-align: center;
 }
 
-.payment-card:hover{
+.payment-card:hover, .payment-card.selected{
     background-color: rgba(24, 118, 201, 0.159);
     border-color: rgb(8, 92, 165);
 }

@@ -6,7 +6,9 @@ import "./productCart.css"
 
 
 const ProductCart = () => {
+   
     const {products, removeFromCart,total} = useShop()
+    
   return(
     <div className="cart-products">
         <h2>Cart Products</h2>
