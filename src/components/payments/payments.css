@@ -1,0 +1,34 @@
+.payment-card{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 0;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.payment-card:hover{
+    background-color: rgba(24, 118, 201, 0.159);
+    border-color: rgb(8, 92, 165);
+}
+
+.form-control{
+    width: 80%;
+    margin: 0 12px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 20px;
+    outline: none;
+}
+.btn-proceed{
+    background-color: #1877c9;
+    width: 94%;
+    margin: 10px 12px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
