@@ -58,3 +58,17 @@ body{
     text-align: center;
   }
 
+
+  .cart-container{
+    max-width: 1280px;
+    margin-top: 30px;
+    margin-left: 15%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border-radius: 10px;
+    grid-gap: 20px;
+    padding: 20px;
+    place-items: center;
+  }

@@ -1,5 +1,9 @@
 import React from 'react'
 import useShop from '../../ShowContext'
+import "./productCart.css"
+
+
+
 
 const ProductCart = () => {
     const {products, removeFromCart,total} = useShop()
@@ -10,11 +14,11 @@ const ProductCart = () => {
             <div className="cart-product">
                 <div className="cart-title-img">
                     <img src={product.urlImage} alt="" />
-                    <span>{product.name}</span>
+                    <span className='product-name'>{product.name}</span>
                 </div>
                 <h5>${product.price}</h5>
                 <span className="delete" onClick={() => removeFromCart(product)}>
-                    Delete
+                    x
                 </span>
             </div>
         ))}
